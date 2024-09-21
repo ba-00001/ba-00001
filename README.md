@@ -71,4 +71,26 @@ _May – Aug 2024 | New York, NY_
 ## 🚧 Projects
 Here's where I roll up my sleeves and get into code!
 
-- **[FlashGenius](https://github.com/ba-00001/DEMOS-PROJECT
+- **[FlashGenius](https://github.com/ba-00001/DEMOS-PROJECTS/blob/main/resources/README-AI.FLASHCARDS-FLASH.GENIUS.MD)**: AI-powered flashcards to help you ace any subject.
+- **[Pantry Tracker](https://github.com/ba-00001/DEMOS-PROJECTS/blob/main/resources/Pantry-Tracker-Web-App.MD)**: Never run out of snacks again with this pantry management app! 🍪
+
+Check out more of my projects on [GitHub](https://github.com/ba-00001).
+
+---
+
+## 🏆 Honors and Awards
+- **Dean’s List**: Spring 2024, Fall 2023, Spring 2023
+- **Hispanic Scholarship Fund**: July 2023
+- **TAU SIGMA National Honor Society**: June 2023
+- **Phi Theta Kappa Honor Society**: July 2022
+
+---
+
+## 🔗 Connect with me!
+
+- [LinkedIn](https://linkedin.com/in/IBA001)  
+- [GitHub](https://github.com/ba-00001)
+
+---
+
+**PS**: Always open to tech tips, a quick S’mores chat, or discussions on the latest gadgets!
