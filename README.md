@@ -1,4 +1,4 @@
-## Hi there 👋
+
 
 <!--
 **ba-00001/ba-00001** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
