@@ -35,8 +35,8 @@ I’m the type of person who loves combining tech with community — just like c
 
 **Florida International University**  
 *Bachelor of Arts in Computer Science, Honors College*  
-_Minors: Actuarial Studies_  
-**GPA**: 3.67 | Expected May 2026
+_Minors: Business Analytics_  
+**GPA**: 3.67 
 
 **Google Tech Exchange**  
 _Completed coursework in Applied Data Structures & Algorithms, Software Development, and Careers in Tech (Jan-May 2024)_
