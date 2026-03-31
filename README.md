@@ -331,7 +331,7 @@ Founded and lead a technical student organization focused on helping students st
 
 ## Tech Fellow — CodePath
 
-June 2024 – Present
+Sep 2023 – Present
 
 Support students learning:
 
