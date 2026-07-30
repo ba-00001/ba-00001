@@ -1,0 +1,36 @@
+[
+  {
+    "type": "normal",
+    "fileName": "blueprint-dark.svg",
+    "growingAnimation": true,
+    "backgroundColor": "#071626",
+    "foregroundColor": "#cfe9ff",
+    "strongColor": "#f0a500",
+    "weakColor": "#5d829f",
+    "radarColor": "#38bdf8",
+    "contribColors": [
+      "#0b2036",
+      "#1d3a55",
+      "#27506f",
+      "#38bdf8",
+      "#7dd3fc"
+    ]
+  },
+  {
+    "type": "normal",
+    "fileName": "blueprint-light.svg",
+    "growingAnimation": true,
+    "backgroundColor": "#eef3f8",
+    "foregroundColor": "#123049",
+    "strongColor": "#b45309",
+    "weakColor": "#5b7893",
+    "radarColor": "#0369a1",
+    "contribColors": [
+      "#e3ebf3",
+      "#c2d4e4",
+      "#a3bed4",
+      "#0369a1",
+      "#075985"
+    ]
+  }
+]

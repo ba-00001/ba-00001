@@ -84,6 +84,41 @@ jobs:
           echo "collected $(wc -l < days.txt) days, $start..$end"
           python3 assets/src/activity.py dist < days.txt
 
+      # FIG. 6 — the same grid, inked column by column by a plotter pen. Also
+      # ours, so it is in the blueprint palette and cannot break.
+      - name: Plotter grid
+        run: python3 assets/src/plot.py dist < days.txt
+
+      # FIG. 7 — isometric towers. Third-party, but the only contribution-graph
+      # renderer with full colour control, so it can be themed to the sheet
+      # instead of arriving GitHub-green. assets/3d-blueprint.json emits both
+      # variants in one run.
+      - name: Isometric contributions
+        uses: yoshi389111/github-profile-3d-contrib@latest
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USERNAME: ${{ github.repository_owner }}
+          SETTING_JSON: assets/3d-blueprint.json
+
+      - name: Collect isometric output
+        run: |
+          set -euo pipefail
+          for mode in dark light; do
+            src="profile-3d-contrib/blueprint-$mode.svg"
+            [ -f "$src" ] || { echo "::error::$src was not generated"; ls -R profile-3d-contrib || true; exit 1; }
+            cp "$src" "dist/iso-$mode.svg"
+            echo "ok  iso-$mode.svg  $(wc -c <"dist/iso-$mode.svg") bytes"
+          done
+
+      # Arcade cards. These only accept four named themes, so unlike everything
+      # else they cannot be palette-matched — which is why the README keeps them
+      # in a collapsed block rather than on a main sheet.
+      - name: Arcade games
+        uses: abozanona/pacman-contribution-graph@main
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          games: pacman,breakout
+
       - name: Snake
         uses: Platane/snk@v3
         with:

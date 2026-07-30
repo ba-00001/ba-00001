@@ -59,6 +59,18 @@ ASK ME     python, kotlin/swift, fuzzing, running a dev community that actually 
   <img alt="Contribution activity graph" src="https://raw.githubusercontent.com/ba-00001/ba-00001/output/activity-dark.svg" width="100%">
 </picture>
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ba-00001/ba-00001/output/plot-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ba-00001/ba-00001/output/plot-light.svg">
+  <img alt="Figure 6 — contribution grid inked by a plotter pen" src="https://raw.githubusercontent.com/ba-00001/ba-00001/output/plot-dark.svg" width="100%">
+</picture>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ba-00001/ba-00001/output/iso-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ba-00001/ba-00001/output/iso-light.svg">
+  <img alt="Figure 7 — isometric view of contribution volume" src="https://raw.githubusercontent.com/ba-00001/ba-00001/output/iso-dark.svg" width="100%">
+</picture>
+
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ba-00001/ba-00001/output/snake-dark.svg">
@@ -66,6 +78,23 @@ ASK ME     python, kotlin/swift, fuzzing, running a dev community that actually 
     <img alt="Contribution grid, eaten by a snake" src="https://raw.githubusercontent.com/ba-00001/ba-00001/output/snake-dark.svg" width="100%">
   </picture>
 </p>
+
+<details>
+<summary><b>Arcade mode</b> — the same grid, played</summary>
+<br>
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ba-00001/ba-00001/output/pacman-contribution-graph-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ba-00001/ba-00001/output/pacman-contribution-graph.svg">
+    <img alt="Pac-Man eating the contribution grid" src="https://raw.githubusercontent.com/ba-00001/ba-00001/output/pacman-contribution-graph-dark.svg" width="100%">
+  </picture>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ba-00001/ba-00001/output/breakout-contribution-graph-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ba-00001/ba-00001/output/breakout-contribution-graph.svg">
+    <img alt="Breakout played against the contribution grid" src="https://raw.githubusercontent.com/ba-00001/ba-00001/output/breakout-contribution-graph-dark.svg" width="100%">
+  </picture>
+</p>
+</details>
 
 <details open>
 <summary><b>Supplementary sheets</b> — language split, commit rhythm, profile summary</summary>
