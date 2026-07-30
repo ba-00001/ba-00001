@@ -1,12 +1,16 @@
 #!/usr/bin/env python3
 """Render the contribution-streak card from the contributions calendar.
 
-Replaces DenverCoder1/github-readme-streak-stats, which reported 9,617 total
-contributions, a 12-day current streak and an 18-day longest streak for this
-account on 2026-07-30. The calendar API says 2,591 / 3 / 6, and FIG. 5 — built
-from that same feed — agrees with the calendar. Rather than publish a number
-the rest of the page contradicts, the card is computed here from the one
-source of truth.
+Replaces DenverCoder1/github-readme-streak-stats. Not because that action was
+wrong — it reported 9,617 / 12 / 18 and the calendar agrees — but because
+computing the card here means every figure on the page (this card, FIG. 5,
+FIG. 6) comes from one feed and cannot drift apart, the card is in the
+blueprint palette, and one more load-time dependency is gone.
+
+Historical note: this card was briefly justified by a "the third-party number
+is inflated" claim. That was a stale local snapshot of the feed, not a real
+discrepancy. Re-fetching gave the same totals the action reported. If the
+numbers here ever look wrong, re-fetch before concluding anything.
 
 Input:  "YYYY-MM-DD <count>" lines on stdin (same feed as activity.py/plot.py).
 Output: <outdir>/streak-dark.svg and <outdir>/streak-light.svg

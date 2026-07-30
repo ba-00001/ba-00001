@@ -76,10 +76,9 @@ jobs:
       - name: Plotter grid
         run: python3 assets/src/plot.py dist < days.txt
 
-      # The streak card is computed from the same feed rather than fetched. The
-      # third-party card reported 9,617 contributions / 12 current / 18 longest
-      # on 2026-07-30 when the calendar says 2,591 / 3 / 6 — a number the rest
-      # of the page contradicted. One feed, one set of numbers.
+      # The streak card is computed from the same feed rather than fetched, so
+      # this card, FIG. 5 and FIG. 6 can never disagree, and it lands in the
+      # blueprint palette. The third-party card it replaced was not wrong.
       - name: Streak card
         run: python3 assets/src/streak.py dist < days.txt
 
