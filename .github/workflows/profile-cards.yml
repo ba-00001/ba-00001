@@ -40,14 +40,14 @@ jobs:
             dist/snake-light.svg?palette=github-light&color_snake=%23b45309&color_dots=%23e3ebf3,%23a3bed4,%230ea5e9,%230369a1,%23075985
 
       - name: Streak (dark)
-        uses: DenverCoder1/github-readme-streak-stats@v1
+        uses: DenverCoder1/github-readme-streak-stats@v1.7.0
         with:
           path: dist/streak-dark.svg
           options: >-
             user=${{ github.repository_owner }}&border_radius=0&background=071626&border=27506F&stroke=27506F&ring=38BDF8&fire=F0A500&currStreakNum=CFE9FF&sideNums=CFE9FF&currStreakLabel=38BDF8&sideLabels=5D829F&dates=5D829F
 
       - name: Streak (light)
-        uses: DenverCoder1/github-readme-streak-stats@v1
+        uses: DenverCoder1/github-readme-streak-stats@v1.7.0
         with:
           path: dist/streak-light.svg
           options: >-
