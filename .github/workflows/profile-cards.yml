@@ -56,6 +56,38 @@ jobs:
             dist/snake-dark.svg?palette=github-dark&color_snake=%23f0a500&color_dots=%23071626,%231d3a55,%2327506f,%2338bdf8,%237dd3fc
             dist/snake-light.svg?palette=github-light&color_snake=%23b45309&color_dots=%23e3ebf3,%23a3bed4,%230ea5e9,%230369a1,%23075985
 
+      # A 31-day window looks empty during a quiet stretch — exams, a break —
+      # which reads as "stopped coding" rather than "was busy elsewhere". When
+      # the last month is thin, widen the graph to 90 days so the shape of the
+      # work still shows. 90 is the service's hard cap: anything larger is
+      # silently ignored and falls back to 31.
+      - name: Choose activity window
+        id: window
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -uo pipefail
+          from="$(date -u -d '31 days ago' +%Y-%m-%dT%H:%M:%SZ)"
+          recent="$(gh api graphql \
+            -f login='${{ github.repository_owner }}' -f from="$from" \
+            -f query='query($login:String!,$from:DateTime!){user(login:$login){contributionsCollection(from:$from){contributionCalendar{totalContributions}}}}' \
+            --jq '.data.user.contributionsCollection.contributionCalendar.totalContributions' 2>/dev/null || true)"
+
+          # Any failure (token scope, API hiccup) falls through to the 31-day
+          # default rather than failing the run.
+          case "$recent" in ''|*[!0-9]*) recent=-1 ;; esac
+
+          if [ "$recent" -ge 0 ] && [ "$recent" -lt 25 ]; then
+            days=90; label='LAST 90 DAYS'
+          else
+            days=31; label='LAST 31 DAYS'
+          fi
+          echo "last 31 days: $recent contributions -> window ${days}d"
+          {
+            echo "days=$days"
+            echo "label=$label"
+          } >> "$GITHUB_OUTPUT"
+
       # Snapshot the remaining cards so a visitor's browser never depends on a
       # third-party service being up. One fetch per card per day sits far under
       # the unauthenticated GitHub rate limit, which is why no token is needed.
@@ -67,7 +99,11 @@ jobs:
           user='${{ github.repository_owner }}'
           grs='https://github-readme-stats-ba.vercel.app'
           graph='https://github-readme-activity-graph.vercel.app/graph'
+          summary='https://github-profile-summary-cards.vercel.app/api/cards'
           hide='nushell,fortran,nix,cython,roff,tex,makefile,shell,batchfile,dockerfile'
+          window_days='${{ steps.window.outputs.days }}'
+          # percent-encode the title once: spaces -> %20, em dash -> %E2%80%94
+          window_title="FIG.%205%20%E2%80%94%20COMMIT%20ACTIVITY%20/%20$(printf '%s' '${{ steps.window.outputs.label }}' | sed 's/ /%20/g')"
 
           fetch() {
             out="dist/$1"; url="$2"
@@ -96,7 +132,20 @@ jobs:
               "$grs/api/top-langs/?username=$user&layout=compact&langs_count=9&count_private=true&size_weight=0.3&count_weight=0.7&hide=$hide&card_width=420&border_radius=0&custom_title=FIG.%204%20%E2%80%94%20MATERIALS&bg_color=$bg&title_color=$title&text_color=$text&border_color=$border"
 
             fetch "activity-$mode.svg" \
-              "$graph?username=$user&custom_title=FIG.%205%20%E2%80%94%20COMMIT%20ACTIVITY%20/%20LAST%2031%20DAYS&radius=0&bg_color=$bg&color=$gcolor&title_color=$title&line=$line&point=$point&area=true&area_color=$line&border_color=$border"
+              "$graph?username=$user&days=$window_days&custom_title=$window_title&radius=0&bg_color=$bg&color=$gcolor&title_color=$title&line=$line&point=$point&area=true&area_color=$line&border_color=$border"
+
+            # Supplementary cards. These are shown expanded, so they are
+            # snapshotted like everything else. They only take a named theme,
+            # not our palette — hence their own visual style on the page.
+            sum_theme="github_$mode"
+            fetch "sum-profile-$mode.svg" \
+              "$summary/profile-details?username=$user&theme=$sum_theme"
+            fetch "sum-langs-$mode.svg" \
+              "$summary/repos-per-language?username=$user&theme=$sum_theme"
+            fetch "sum-commitlang-$mode.svg" \
+              "$summary/most-commit-language?username=$user&theme=$sum_theme"
+            fetch "sum-time-$mode.svg" \
+              "$summary/productive-time?username=$user&utcOffset=-5&theme=$sum_theme"
           done
 
       - name: Publish to output branch

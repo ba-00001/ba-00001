@@ -67,14 +67,30 @@ ASK ME     python, kotlin/swift, fuzzing, running a dev community that actually 
   </picture>
 </p>
 
-<details>
+<details open>
 <summary><b>Supplementary sheets</b> — language split, commit rhythm, profile summary</summary>
 <br>
 <p align="center">
-  <img alt="Profile summary" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=ba-00001&theme=github_dark" width="100%">
-  <img alt="Repos per language" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=ba-00001&theme=github_dark" width="49%">
-  <img alt="Most committed language" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=ba-00001&theme=github_dark" width="49%">
-  <img alt="Productive time of day" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=ba-00001&utcOffset=-5&theme=github_dark" width="49%">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ba-00001/ba-00001/output/sum-profile-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ba-00001/ba-00001/output/sum-profile-light.svg">
+    <img alt="Profile summary" src="https://raw.githubusercontent.com/ba-00001/ba-00001/output/sum-profile-dark.svg" width="100%">
+  </picture>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ba-00001/ba-00001/output/sum-langs-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ba-00001/ba-00001/output/sum-langs-light.svg">
+    <img alt="Repos per language" src="https://raw.githubusercontent.com/ba-00001/ba-00001/output/sum-langs-dark.svg" width="49%">
+  </picture>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ba-00001/ba-00001/output/sum-commitlang-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ba-00001/ba-00001/output/sum-commitlang-light.svg">
+    <img alt="Most committed language" src="https://raw.githubusercontent.com/ba-00001/ba-00001/output/sum-commitlang-dark.svg" width="49%">
+  </picture>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ba-00001/ba-00001/output/sum-time-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ba-00001/ba-00001/output/sum-time-light.svg">
+    <img alt="Productive time of day" src="https://raw.githubusercontent.com/ba-00001/ba-00001/output/sum-time-dark.svg" width="49%">
+  </picture>
 </p>
 </details>
 
