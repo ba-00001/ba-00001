@@ -4,9 +4,12 @@ name: profile-cards
 # `output` branch, so a visitor's browser never depends on a third-party service
 # being up when the page loads:
 #
-#   activity-{dark,light}.svg   12-month commit graph, drawn by assets/src/activity.py
-#   snake-{dark,light}.svg      contribution grid, eaten
-#   streak-{dark,light}.svg     contribution streak
+#   activity-{dark,light}.svg   FIG. 5 — monthly commit graph      (assets/src/activity.py)
+#   plot-{dark,light}.svg       FIG. 6 — plotter-inked grid        (assets/src/plot.py)
+#   streak-{dark,light}.svg     streak card                        (assets/src/streak.py)
+#   iso-{dark,light}.svg        FIG. 7 — isometric towers          (3d-contrib, themed)
+#   snake-{dark,light}.svg      contribution grid, eaten           (snk)
+#   arcade-*-{dark,light}.svg   Pac-Man / Breakout, recoloured     (assets/src/retheme.py)
 #   stats/langs-{dark,light}.svg        fetched from our own stats instance
 #   sum-*-{dark,light}.svg              supplementary cards
 #
@@ -21,8 +24,8 @@ on:
     branches: [main]
     paths:
       - .github/workflows/profile-cards.yml
-      - assets/src/activity.py
-      - assets/src/build.py
+      - assets/src/*.py
+      - assets/3d-blueprint.json
 
 permissions:
   contents: write
@@ -37,25 +40,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # Streak runs FIRST, and creates dist/ as the `runner` user. Platane/snk
-      # is a Docker action running as root: if it creates dist/ first, the PHP
-      # streak step cannot write into it ("Permission denied").
-      #
-      # The action has no floating v1 tag — it must be pinned to a full version.
-      - name: Streak (dark)
-        uses: DenverCoder1/github-readme-streak-stats@v1.7.0
-        with:
-          path: dist/streak-dark.svg
-          options: >-
-            user=${{ github.repository_owner }}&border_radius=0&background=071626&border=27506F&stroke=27506F&ring=38BDF8&fire=F0A500&currStreakNum=CFE9FF&sideNums=CFE9FF&currStreakLabel=38BDF8&sideLabels=5D829F&dates=5D829F
-
-      - name: Streak (light)
-        uses: DenverCoder1/github-readme-streak-stats@v1.7.0
-        with:
-          path: dist/streak-light.svg
-          options: >-
-            user=${{ github.repository_owner }}&border_radius=0&background=EEF3F8&border=A3BED4&stroke=A3BED4&ring=0369A1&fire=B45309&currStreakNum=123049&sideNums=123049&currStreakLabel=0369A1&sideLabels=5B7893&dates=5B7893
-
       # FIG. 5 is drawn here rather than fetched. The activity-graph service
       # caps at 90 days — larger values are silently ignored and fall back to
       # 31 — so anything longer is only possible by rendering it ourselves,
@@ -64,6 +48,9 @@ jobs:
       # contributionsCollection only returns one year per call, so this walks
       # year by year from the account's creation date to now and concatenates
       # the daily counts. activity.py buckets them into months.
+      # Runs before Platane/snk on purpose: snk is a Docker action running as
+      # root, and if it creates dist/ first the later python steps cannot write
+      # into it ("Permission denied").
       - name: Activity graph (monthly, full history)
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -88,6 +75,13 @@ jobs:
       # ours, so it is in the blueprint palette and cannot break.
       - name: Plotter grid
         run: python3 assets/src/plot.py dist < days.txt
+
+      # The streak card is computed from the same feed rather than fetched. The
+      # third-party card reported 9,617 contributions / 12 current / 18 longest
+      # on 2026-07-30 when the calendar says 2,591 / 3 / 6 — a number the rest
+      # of the page contradicted. One feed, one set of numbers.
+      - name: Streak card
+        run: python3 assets/src/streak.py dist < days.txt
 
       # FIG. 7 — isometric towers. Third-party, but the only contribution-graph
       # renderer with full colour control, so it can be themed to the sheet
