@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="1200" height="300" role="img" aria-label="blueprint sheet">
+  <defs>
+    <pattern id="finefigbuildloopdark" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M20 0H0V20" fill="none" stroke="#1d3a55" stroke-width=".5" opacity=".55"/>
+    </pattern>
+    <pattern id="boldfigbuildloopdark" width="100" height="100" patternUnits="userSpaceOnUse">
+      <path d="M100 0H0V100" fill="none" stroke="#27506f" stroke-width=".9" opacity=".7"/>
+    </pattern>
+    <linearGradient id="vigfigbuildloopdark" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b2036"/>
+      <stop offset="1" stop-color="#071626"/>
+    </linearGradient>
+    <linearGradient id="sweepgrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#38bdf8" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#38bdf8" stop-opacity=".13"/>
+      <stop offset="1" stop-color="#38bdf8" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="wipefigbuildloopdark">
+      <rect class="wipe" x="0" y="0" width="1200" height="300"/>
+    </clipPath>
+  </defs>
+  <style>
+    .fade { animation: fade .5s ease-out both; }
+    .wipe { animation: wipe 1.5s cubic-bezier(.2,.7,.2,1) both; }
+    .blink { animation: fade .5s ease-out 1.9s both, blink 1.1s step-end 2.4s infinite; }
+    .sweep { animation: sweep var(--dur, 8s) cubic-bezier(.45,0,.55,1) infinite; }
+    .flow { animation: flow 1.1s linear infinite; }
+    @keyframes fade { from { opacity: 0; } }
+    @keyframes wipe { from { width: 0; } }
+    @keyframes blink { 50% { opacity: 0; } }
+    @keyframes sweep { from { transform: translateX(0); } to { transform: translateX(1260px); } }
+    @keyframes flow { from { stroke-dashoffset: 16; } to { stroke-dashoffset: 0; } }
+    @media (prefers-reduced-motion: reduce) {
+      .fade, .wipe, .blink, .sweep, .flow { animation: none; }
+    }
+  </style>
+  <rect width="1200" height="300" fill="url(#vigfigbuildloopdark)"/>
+  <rect width="1200" height="300" fill="url(#finefigbuildloopdark)"/>
+  <rect width="1200" height="300" fill="url(#boldfigbuildloopdark)"/>
+  <rect x="18" y="18" width="1164" height="264" fill="none"
+        stroke="#27506f" stroke-width="1.4"/>
+  <rect x="24" y="24" width="1152" height="252" fill="none"
+        stroke="#27506f" stroke-width=".7" opacity=".7"/>
+  <g stroke="#38bdf8" stroke-width="1" opacity=".65"><circle cx="30" cy="30" r="7" fill="none"/><path d="M18 30h24M30 18v24"/></g><g stroke="#38bdf8" stroke-width="1" opacity=".65"><circle cx="1170" cy="30" r="7" fill="none"/><path d="M1158 30h24M1170 18v24"/></g><g stroke="#38bdf8" stroke-width="1" opacity=".65"><circle cx="30" cy="270" r="7" fill="none"/><path d="M18 270h24M30 258v24"/></g><g stroke="#38bdf8" stroke-width="1" opacity=".65"><circle cx="1170" cy="270" r="7" fill="none"/><path d="M1158 270h24M1170 258v24"/></g>
+  <text x="64" y="66" fill="#cfe9ff" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="17" font-weight="700" letter-spacing="3.4" text-anchor="start" opacity="1">FIG. 2  —  HOW I BUILD</text>
+  <path d="M64 78h300" stroke="#38bdf8" stroke-width="1.4"/>
+  <text x="64" y="96" fill="#5d829f" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" font-weight="400" letter-spacing="1.4" text-anchor="start" opacity="1">iterative loop / every stage assumes the previous one is wrong</text>
+  
+  <g class="fade" style="animation-delay:0.5s">
+    <rect x="64" y="128" width="186" height="74" fill="#071626" fill-opacity=".7"
+          stroke="#38bdf8" stroke-width="1.3"/>
+    <path d="M64 150h186" stroke="#38bdf8" stroke-width=".7" opacity=".5"/>
+    <text x="74" y="144" fill="#5d829f" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="400" letter-spacing="1.6" text-anchor="start" opacity="1">01</text>
+    <text x="157.0" y="176" fill="#cfe9ff" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="20" font-weight="700" letter-spacing="3" text-anchor="middle" opacity="1">SPEC</text>
+    <text x="157.0" y="193" fill="#5d829f" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="400" letter-spacing="1.2" text-anchor="middle" opacity="1">read + question</text>
+  </g>
+  <g class="fade" style="animation-delay:0.59s">
+    <path class="flow" d="M254 165.0h20" stroke="#f0a500" stroke-width="1.2"
+          stroke-dasharray="4 4"/>
+    <path d="M274 160.0l8 5-8 5z" fill="#f0a500"/>
+  </g>
+  <g class="fade" style="animation-delay:0.6799999999999999s">
+    <rect x="284" y="128" width="186" height="74" fill="#071626" fill-opacity=".7"
+          stroke="#38bdf8" stroke-width="1.3"/>
+    <path d="M284 150h186" stroke="#38bdf8" stroke-width=".7" opacity=".5"/>
+    <text x="294" y="144" fill="#5d829f" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="400" letter-spacing="1.6" text-anchor="start" opacity="1">02</text>
+    <text x="377.0" y="176" fill="#cfe9ff" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="20" font-weight="700" letter-spacing="3" text-anchor="middle" opacity="1">AGENT</text>
+    <text x="377.0" y="193" fill="#5d829f" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="400" letter-spacing="1.2" text-anchor="middle" opacity="1">draft w/ AI</text>
+  </g>
+  <g class="fade" style="animation-delay:0.7699999999999999s">
+    <path class="flow" d="M474 165.0h20" stroke="#f0a500" stroke-width="1.2"
+          stroke-dasharray="4 4"/>
+    <path d="M494 160.0l8 5-8 5z" fill="#f0a500"/>
+  </g>
+  <g class="fade" style="animation-delay:0.86s">
+    <rect x="504" y="128" width="186" height="74" fill="#071626" fill-opacity=".7"
+          stroke="#38bdf8" stroke-width="1.3"/>
+    <path d="M504 150h186" stroke="#38bdf8" stroke-width=".7" opacity=".5"/>
+    <text x="514" y="144" fill="#5d829f" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="400" letter-spacing="1.6" text-anchor="start" opacity="1">03</text>
+    <text x="597.0" y="176" fill="#cfe9ff" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="20" font-weight="700" letter-spacing="3" text-anchor="middle" opacity="1">BUILD</text>
+    <text x="597.0" y="193" fill="#5d829f" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="400" letter-spacing="1.2" text-anchor="middle" opacity="1">implement</text>
+  </g>
+  <g class="fade" style="animation-delay:0.95s">
+    <path class="flow" d="M694 165.0h20" stroke="#f0a500" stroke-width="1.2"
+          stroke-dasharray="4 4"/>
+    <path d="M714 160.0l8 5-8 5z" fill="#f0a500"/>
+  </g>
+  <g class="fade" style="animation-delay:1.04s">
+    <rect x="724" y="128" width="186" height="74" fill="#071626" fill-opacity=".7"
+          stroke="#38bdf8" stroke-width="1.3"/>
+    <path d="M724 150h186" stroke="#38bdf8" stroke-width=".7" opacity=".5"/>
+    <text x="734" y="144" fill="#5d829f" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="400" letter-spacing="1.6" text-anchor="start" opacity="1">04</text>
+    <text x="817.0" y="176" fill="#cfe9ff" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="20" font-weight="700" letter-spacing="3" text-anchor="middle" opacity="1">FUZZ</text>
+    <text x="817.0" y="193" fill="#5d829f" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="400" letter-spacing="1.2" text-anchor="middle" opacity="1">break it</text>
+  </g>
+  <g class="fade" style="animation-delay:1.1300000000000001s">
+    <path class="flow" d="M914 165.0h20" stroke="#f0a500" stroke-width="1.2"
+          stroke-dasharray="4 4"/>
+    <path d="M934 160.0l8 5-8 5z" fill="#f0a500"/>
+  </g>
+  <g class="fade" style="animation-delay:1.22s">
+    <rect x="944" y="128" width="186" height="74" fill="#071626" fill-opacity=".7"
+          stroke="#38bdf8" stroke-width="1.3"/>
+    <path d="M944 150h186" stroke="#38bdf8" stroke-width=".7" opacity=".5"/>
+    <text x="954" y="144" fill="#5d829f" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="400" letter-spacing="1.6" text-anchor="start" opacity="1">05</text>
+    <text x="1037.0" y="176" fill="#cfe9ff" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="20" font-weight="700" letter-spacing="3" text-anchor="middle" opacity="1">EVAL</text>
+    <text x="1037.0" y="193" fill="#5d829f" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="400" letter-spacing="1.2" text-anchor="middle" opacity="1">measure</text>
+  </g>
+  <g class="fade" style="animation-delay:1.55s">
+    <path d="M1037.0 202 v34 H157.0 v-34" fill="none" stroke="#5d829f"
+          stroke-width="1.1" stroke-dasharray="5 5"/>
+    <path d="M152.0 212l5-10 5 10z" fill="#5d829f"/>
+    <text x="643.5" y="254" fill="#5d829f" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" font-weight="400" letter-spacing="2" text-anchor="middle" opacity="1">FEEDBACK — WHAT BROKE, AND WHY IT BROKE</text>
+  </g>
+  
+  <g opacity=".5">
+    <rect class="sweep" style="--dur:9s" x="-90" y="0" width="90" height="300" fill="url(#sweepgrad)"/>
+  </g></svg>

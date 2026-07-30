@@ -1,484 +1,187 @@
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/header-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/header-light.svg">
+  <img alt="Brian Bazurto — software engineer, Florida International University Honors College" src="assets/header-dark.svg" width="100%">
+</picture>
 
+<p align="center">
+  <a href="https://brian-bazurto.vercel.app"><img alt="Portfolio" src="https://img.shields.io/badge/PORTFOLIO-brian--bazurto.vercel.app-38bdf8?style=flat-square&labelColor=071626"></a>
+  <a href="https://linkedin.com/in/IBA001"><img alt="LinkedIn" src="https://img.shields.io/badge/LINKEDIN-IBA001-0a66c2?style=flat-square&labelColor=071626"></a>
+  <img alt="Location" src="https://img.shields.io/badge/LOCATION-MIAMI%2C%20FL-f0a500?style=flat-square&labelColor=071626">
+  <img alt="Profile views" src="https://komarev.com/ghpvc/?username=ba-00001&style=flat-square&color=38bdf8&label=SHEET+VIEWS">
+</p>
+
+---
+
+## `SHEET 01` — Scope
+
+CS student at **Florida International University** (Honors College, minor in Business Analytics), and founder of six student technical organizations across South Florida.
+
+I build things that sit close to the tooling layer — AI coding agents, grammar-based fuzzers, evaluation harnesses — plus a lot of shipped product: language-learning apps, a LaTeX converter, a housing-affordability assistant, native Android and iOS apps.
+
+The thread through all of it: **I'd rather find out my code is wrong from a fuzzer than from a user.**
+
+```
+FOCUS      ai coding agents · automated testing · developer tooling
+BUILDING   habla365 · PaperTeX · Filebrew · Code Crunch Worldwide
+LEARNING   evaluation environments, specification ambiguity, agent reasoning gaps
+ASK ME     python, kotlin/swift, fuzzing, running a dev community that actually shows up
+```
+
+---
+
+## `SHEET 02` — Telemetry
+
+<p align="center">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats-ba.vercel.app/api?username=ba-00001&show_icons=true&include_all_commits=true&count_private=true&rank_icon=percentile&border_radius=0&custom_title=FIG.%203%20%E2%80%94%20BUILD%20TELEMETRY&bg_color=071626&title_color=38bdf8&text_color=cfe9ff&icon_color=f0a500&border_color=27506f">
+  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats-ba.vercel.app/api?username=ba-00001&show_icons=true&include_all_commits=true&count_private=true&rank_icon=percentile&border_radius=0&custom_title=FIG.%203%20%E2%80%94%20BUILD%20TELEMETRY&bg_color=eef3f8&title_color=0369a1&text_color=123049&icon_color=b45309&border_color=a3bed4">
+  <img alt="GitHub stats" src="https://github-readme-stats-ba.vercel.app/api?username=ba-00001&show_icons=true&include_all_commits=true&count_private=true&rank_icon=percentile&border_radius=0&bg_color=071626&title_color=38bdf8&text_color=cfe9ff&icon_color=f0a500&border_color=27506f" height="195">
+</picture>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com?user=ba-00001&border_radius=0&background=071626&border=27506F&stroke=27506F&ring=38BDF8&fire=F0A500&currStreakNum=CFE9FF&sideNums=CFE9FF&currStreakLabel=38BDF8&sideLabels=5D829F&dates=5D829F">
+  <source media="(prefers-color-scheme: light)" srcset="https://streak-stats.demolab.com?user=ba-00001&border_radius=0&background=EEF3F8&border=A3BED4&stroke=A3BED4&ring=0369A1&fire=B45309&currStreakNum=123049&sideNums=123049&currStreakLabel=0369A1&sideLabels=5B7893&dates=5B7893">
+  <img alt="Contribution streak" src="https://streak-stats.demolab.com?user=ba-00001&border_radius=0&background=071626&border=27506F&stroke=27506F&ring=38BDF8&fire=F0A500&currStreakNum=CFE9FF&sideNums=CFE9FF&currStreakLabel=38BDF8&sideLabels=5D829F&dates=5D829F" height="195">
+</picture>
+</p>
+
+<p align="center">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats-ba.vercel.app/api/top-langs/?username=ba-00001&layout=compact&langs_count=10&count_private=true&size_weight=0.6&count_weight=0.4&border_radius=0&custom_title=FIG.%204%20%E2%80%94%20MATERIAL%20DISTRIBUTION&bg_color=071626&title_color=38bdf8&text_color=cfe9ff&border_color=27506f">
+  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats-ba.vercel.app/api/top-langs/?username=ba-00001&layout=compact&langs_count=10&count_private=true&size_weight=0.6&count_weight=0.4&border_radius=0&custom_title=FIG.%204%20%E2%80%94%20MATERIAL%20DISTRIBUTION&bg_color=eef3f8&title_color=0369a1&text_color=123049&border_color=a3bed4">
+  <img alt="Most used languages" src="https://github-readme-stats-ba.vercel.app/api/top-langs/?username=ba-00001&layout=compact&langs_count=10&count_private=true&size_weight=0.6&count_weight=0.4&border_radius=0&bg_color=071626&title_color=38bdf8&text_color=cfe9ff&border_color=27506f" width="420">
+</picture>
+</p>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=ba-00001&custom_title=FIG.%205%20%E2%80%94%20COMMIT%20ACTIVITY%20/%20LAST%2031%20DAYS&radius=0&bg_color=071626&color=cfe9ff&title_color=38bdf8&line=38bdf8&point=f0a500&area=true&area_color=38bdf8&border_color=27506f">
+  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=ba-00001&custom_title=FIG.%205%20%E2%80%94%20COMMIT%20ACTIVITY%20/%20LAST%2031%20DAYS&radius=0&bg_color=eef3f8&color=123049&title_color=0369a1&line=0369a1&point=b45309&area=true&area_color=0369a1&border_color=a3bed4">
+  <img alt="Contribution activity graph" src="https://github-readme-activity-graph.vercel.app/graph?username=ba-00001&radius=0&bg_color=071626&color=cfe9ff&title_color=38bdf8&line=38bdf8&point=f0a500&area=true&area_color=38bdf8&border_color=27506f" width="100%">
+</picture>
+
+<p align="center">
+  <img alt="Contribution grid, eaten by a snake" src="https://raw.githubusercontent.com/ba-00001/ba-00001/output/snake.svg" width="100%">
+</p>
+
+<details>
+<summary><b>Supplementary sheets</b> — language split, commit rhythm, profile summary</summary>
+<br>
+<p align="center">
+  <img alt="Profile summary" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=ba-00001&theme=github_dark" width="100%">
+  <img alt="Repos per language" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=ba-00001&theme=github_dark" width="49%">
+  <img alt="Most committed language" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=ba-00001&theme=github_dark" width="49%">
+  <img alt="Productive time of day" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=ba-00001&utcOffset=-5&theme=github_dark" width="49%">
+</p>
+</details>
+
+---
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/fig-build-loop-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/fig-build-loop-light.svg">
+  <img alt="Figure 2 — how I build: spec, agent, build, fuzz, eval, feedback" src="assets/fig-build-loop-dark.svg" width="100%">
+</picture>
+
+---
+
+## `SHEET 03` — Selected work
+
+| # | Project | What it is | Stack | Live |
+|:--|:--|:--|:--|:--|
+| 01 | **habla365** | Free 365-day language course, one short lesson a day — shipped in 10 languages off one framework | JS · Capacitor · Android/iOS | — |
+| 02 | **PaperTeX** | LaTeX → PDF & Word across desktop, web and mobile, all sharing one converter backend | PySide6 · Flutter · TeXLive | [papertex-five](https://papertex-five.vercel.app) |
+| 03 | **Filebrew** | Open-source local media converter — video, audio, image, nothing leaves your machine | Electron · ffmpeg | [repo](https://github.com/CODE-CRUNCH-LABS/Filebrew) |
+| 04 | **Code Crunch Worldwide** | Website + curriculum hub for the org I founded | Static site · Vercel | [codecrunchglobal](https://codecrunchglobal.vercel.app) |
+| 05 | **Code Crunch Tutor** | On-device voice language tutor — Whisper + WebLLM + Kokoro, entirely in-browser | Chrome ext · WebLLM | — |
+| 06 | **ai-media** | Local, free brand-media generator (flyers, promo video, mascots) exposed over MCP / CLI / HTTP | Python · MCP | — |
+| 07 | **Sturdy** | Housing-affordability assistant: affordable rent/buy estimates, grant matching, listing ranking | Flutter · Dart | — |
+| 08 | **HootHacks** | Hackathon build — ranked entry, Flutter | Dart · Flutter | [repo](https://github.com/ba-00001/hoothacks) |
+
+<details>
+<summary><b>More public repos</b> — fuzzing, tooling, mobile coursework</summary>
+
+- [`talentsignalstudio`](https://github.com/ba-00001/talentsignalstudio) — Python, hiring-signal analysis
+- [`jobtracker`](https://github.com/ba-00001/jobtracker) — Python, application pipeline tracking
+- [`neighborly`](https://github.com/ba-00001/neighborly) — Dart/Flutter, community app
+- [`QuickBite`](https://github.com/ba-00001/QuickBite) — Python
+- [`career-navigator-us-job-market`](https://github.com/ba-00001/career-navigator-us-job-market) — job-market analysis
+- [`DEMOS-PROJECTS`](https://github.com/ba-00001/DEMOS-PROJECTS) — FlashGenius (AI flashcards), Pantry Tracker, EcoRoute, HealthWatch write-ups
+- [`unit_test_calculator`](https://github.com/ba-00001/unit_test_calculator) — Python, test-first calculator
+- Mobile: [`TUNE-TREK-APP-IOS`](https://github.com/ba-00001/TUNE-TREK-APP-IOS) · [`BITFIT_V2_ANDROID_APP`](https://github.com/ba-00001/BITFIT_V2_ANDROID_APP) · [`TASK_IOS_APP`](https://github.com/ba-00001/TASK_IOS_APP) · [`Tumbler_Detail_IOS_APP`](https://github.com/ba-00001/Tumbler_Detail_IOS_APP)
+
+</details>
+
+---
+
+## `SHEET 04` — Bill of materials
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=py,java,kotlin,swift,ts,js,dart,cpp,mysql&theme=dark">
+    <source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=py,java,kotlin,swift,ts,js,dart,cpp,mysql&theme=light">
+    <img alt="Languages: Python, Java, Kotlin, Swift, TypeScript, JavaScript, Dart, C++, SQL" src="https://skillicons.dev/icons?i=py,java,kotlin,swift,ts,js,dart,cpp,mysql&theme=dark">
+  </picture>
+  <br>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=nextjs,react,flask,firebase,flutter,gcp,vercel,androidstudio,git&theme=dark">
+    <source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=nextjs,react,flask,firebase,flutter,gcp,vercel,androidstudio,git&theme=light">
+    <img alt="Frameworks and tools: Next.js, React, Flask, Firebase, Flutter, Google Cloud, Vercel, Android Studio, Git" src="https://skillicons.dev/icons?i=nextjs,react,flask,firebase,flutter,gcp,vercel,androidstudio,git&theme=dark">
+  </picture>
+</p>
+
+```
+LANGUAGES   python · java · kotlin · swift · typescript · javascript · dart · c++ · sql
+MOBILE      android (kotlin) · ios (swift) · flutter · rest · json · async networking
+BACKEND     flask · firebase/firestore · next.js · google cloud · vercel
+TESTING     grammar-based fuzzing · automated test generation · edge-case discovery
+AGENTS      claude code · mcp servers · prompt/eval workflows · local llm pipelines
+```
+
+---
+
+## `SHEET 05` — Field notes
+
+**President & Founder** — Aug 2024 → present · Miami, FL
+Founded and run six student technical organizations, each with its own site and program:
+[GDG at FIU](https://gdgatfiu.vercel.app) · [Swift Club at FIU](https://swiftclubatfiu.vercel.app) · [Code Crunch](https://codecrunchglobal.vercel.app) · [ColorStack at FIU](https://colorstackatfiu.vercel.app) · [CAHSI at FIU](https://cahsiatfiu.vercel.app) · [Raspberry Pi Code Crunch](https://raspberrypicodecrunch.vercel.app)
+Workshops, interview prep, project-based learning, hackathons, and industry panels with engineers from Google, ServiceNow and Salesforce.
+
+**Tech Fellow** — CodePath · Sep 2023 → present
+Teach data structures, algorithms, debugging strategy and structured problem-solving. Best training I've had in explaining a hard idea to someone who hasn't seen it yet.
+
+**SEO Tech Developer Intern** — May → Aug 2024 · New York, NY
+Built AI-integrated applications end to end: AI Customer Support, EcoRoute, HealthWatch, StockSnap. Python backends, API-driven architectures.
+
+---
+
+## `SHEET 06` — Specifications
+
+| Field | Value |
+|:--|:--|
+| Institution | Florida International University — Honors College |
+| Degree | B.A. Computer Science, minor Business Analytics |
+| Exchange | Google Tech Exchange — applied data structures, software development studio, careers in tech, project management |
+| Certifications | CodePath — Android Dev, iOS Dev, Software Engineering, Cybersecurity |
+| Honors | Dean's List · Hispanic Scholarship Fund Scholar · Tau Sigma National Honor Society · Phi Theta Kappa |
+
+---
+
+## `SHEET 07` — Contact
+
+<p align="center">
+  <a href="https://brian-bazurto.vercel.app"><img alt="Résumé" src="https://img.shields.io/badge/R%C3%89SUM%C3%89-brian--bazurto.vercel.app-38bdf8?style=for-the-badge&labelColor=071626"></a>
+  <a href="https://linkedin.com/in/IBA001"><img alt="LinkedIn" src="https://img.shields.io/badge/LINKEDIN-IBA001-0a66c2?style=for-the-badge&labelColor=071626"></a>
+  <a href="https://github.com/ba-00001?tab=repositories"><img alt="Repositories" src="https://img.shields.io/badge/REPOS-114-f0a500?style=for-the-badge&labelColor=071626"></a>
+</p>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/footer-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/footer-light.svg">
+  <img alt="End of sheet — drawn by Brian Bazurto, checked by a fuzzer" src="assets/footer-dark.svg" width="100%">
+</picture>
 
 <!--
-**ba-00001/ba-00001** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
+Sheet art is generated, not hand-edited: assets/src/build.py emits every
+assets/*.svg in both colour schemes. Edit the script, run `python3
+assets/src/build.py`, commit the regenerated SVGs. CI does the same on push.
 -->
-
-<!--
-# 👋 Hello, I'm Brian Bazurto!
-
-I'm a passionate computer science student who thrives at the intersection of **technology, learning, and community-building**. As the **President & Founder of Code Crunch Club**, I empower students to excel in technical interview preparation and software development by fostering an inclusive and collaborative environment. Dive into my journey of coding, leadership, and community service!
-
-### 🚀 Fun fact: 
-I’m the type of person who loves combining tech with community — just like combining marshmallows, graham crackers, and chocolate for the perfect S’more. 🔥🍫
-
----
-
-### 🧑‍💻 Check out my work:
-- **Code Crunch Club**: Building the next generation of coders!  
-  [Learn more here!](https://ba-00001.github.io/codecrunchclub)
-
----
-
-## 🌟 Education
-
-**Florida International University**  
-*Bachelor of Arts in Computer Science, Honors College*  
-_Minors: Business Analytics_  
-**GPA**: 3.67 
-
-**Google Tech Exchange**  
-_Completed coursework in Applied Data Structures & Algorithms, Software Development, and Careers in Tech (Jan-May 2024)_
-
----
-
-## 🛠️ Skills & Technologies
-- **Languages**: Java, Python, C++, SQL, JavaScript, Kotlin, Next.js
-- **Tools**: Android Studio, PyCharm, Visual Studio, IntelliJ, Git, Google Cloud
-- **Certifications**: CodePath (Android & iOS Dev, Software Engineering, Cybersecurity)
-
----
-
-## 💼 Professional Experience
-
-### **President, Code Crunch Club**  
-_August 2024 – Present | Miami, FL_  
-- Led workshops and panel discussions with leaders from **Google**, **ServiceNow**, and **Salesforce**.
-- Organized coding sessions, interview prep, and hackathons to boost student coding confidence.
-
-### **Tech Fellow, CodePath**  
-_June 2024 – Present_  
-- Taught students how to slay technical interviews like coding ninjas. 🥷💻
-  
-### **Intern, SEO Tech Developer**  
-_May – Aug 2024 | New York, NY_  
-- **AI Customer Support Chatbot**: Built a chatbot that’s smarter than your average customer support agent!  
-- **EcoRoute**: Designed an app to help you save the planet by finding the eco-friendliest travel routes.
-
----
-
-## 🚧 Projects
-Here's where I roll up my sleeves and get into code!
-
-- **[FlashGenius](https://github.com/ba-00001/DEMOS-PROJECTS/blob/main/resources/README-AI.FLASHCARDS-FLASH.GENIUS.MD)**: AI-powered flashcards to help you ace any subject.
-- **[Pantry Tracker](https://github.com/ba-00001/DEMOS-PROJECTS/blob/main/resources/Pantry-Tracker-Web-App.MD)**: Never run out of snacks again with this pantry management app! 🍪
-
-Check out more of my projects on [wEB resume]([https://github.com/ba-00001](https://ba-00001.github.io/resume/)).
-
----
-
-## 🏆 Honors and Awards
-- **Dean’s List**: Spring 2024, Fall 2023, Spring 2023
-- **Hispanic Scholarship Fund**: July 2023
-- **TAU SIGMA National Honor Society**: June 2023
-- **Phi Theta Kappa Honor Society**: July 2022
-
----
-
-## 🔗 Connect with me!
-
-- [LinkedIn](https://linkedin.com/in/IBA001)  
-- [GitHub](https://github.com/ba-00001)
-
----
-
--->
-
-# 👋 Hello, I'm Brian Bazurto
-
-I'm a Computer Science student at **Florida International University (Honors College)** with a minor in **Business Analytics**, interested in **software engineering, AI-assisted development workflows, mobile systems, and automated testing environments**.
-
-I enjoy building projects that sit close to developer tooling and evaluation workflows — especially where software behavior needs to be tested across **edge cases, ambiguous specifications, and real-world constraints**.
-
-Recently, I’ve been exploring how **AI coding agents behave across structured tasks**, while continuing to build systems using **Python, Java, Kotlin, Swift, and cloud-based tools**.
-
----
-
-# 🧠 Technical Interests
-
-- AI coding agents and evaluation environments
-- fuzzing and automated testing workflows
-- developer tooling
-- backend systems
-- mobile application engineering
-- prompt interpretation and correctness analysis
-- software reliability and edge-case behavior
-
----
-
-# 🔬 Technical Work
-
-## Grammar-Based Fuzzing Research
-
-Built grammar-based fuzzers using Python to test structured-input programs such as:
-
-- calculators
-- regex engines
-- URL parsers
-- triangle classifiers
-- CGI decoders
-- binary search
-- quick sort
-- password programs
-
-This work strengthened my understanding of:
-
-- automated test generation
-- behavioral correctness vs expected output
-- adversarial input discovery
-- specification ambiguity
-- detecting hidden assumptions inside software systems
-
----
-
-## AI Customer Support System
-
-Built an AI-powered support assistant using:
-
-- Next.js
-- Firebase authentication
-- Python-based logic
-- structured prompt workflows
-
-Focused on:
-
-- improving interaction reliability
-- designing structured response pipelines
-- integrating frontend + backend AI workflows
-- evaluating output consistency across scenarios
-
----
-
-## Pantry Tracker (Full Stack)
-
-Built a pantry inventory management system using:
-
-- Next.js
-- Firebase
-- Firestore database
-
-Supports:
-
-- item tracking
-- search functionality
-- persistent storage workflows
-- real-time updates
-
-This project strengthened my experience with full-stack application architecture and cloud-backed data systems.
-
----
-
-## FlashGenius (AI Study Assistant)
-
-Built an AI-powered flashcard generator designed to support learning workflows through structured content generation.
-
-Project link:
-
-https://github.com/ba-00001/DEMOS-PROJECTS/blob/main/resources/README-AI.FLASHCARDS-FLASH.GENIUS.MD
-
----
-
-## EcoRoute
-
-Developed a sustainability-focused routing assistant integrating mapping APIs with environmental impact awareness to support smarter travel decisions.
-
----
-
-## HealthWatch
-
-Built a Python + Flask application exploring health monitoring workflows and structured real-time data interaction.
-
----
-
-# 🤖 AI Coding Agent Workflow Experience
-
-I regularly experiment with AI-assisted development tools as part of my engineering workflow.
-
-I have used coding agents to support:
-
-- implementation iteration
-- debugging workflows
-- prompt refinement
-- alternative solution exploration
-- structured response evaluation
-- reasoning-gap identification
-
-Working with these systems has helped me better understand the difference between:
-
-- surface correctness
-- reasoning correctness
-- specification interpretation
-
----
-
-# 🐍 Python Engineering Experience
-
-Python is one of my primary working languages.
-
-I have used Python across:
-
-- grammar-based fuzzing
-- automated testing workflows
-- backend logic development
-- AI-assisted applications
-- scripting and experimentation
-- API-based integrations
-
-I especially enjoy using Python for building evaluation-style tooling and automation environments.
-
----
-
-# 📱 Mobile Engineering Experience
-
-Built multiple native applications across **Android (Kotlin)** and **iOS (Swift)** platforms through coursework and independent development.
-
-### Android Projects
-
-- Flixster+
-- Wishlist
-- BitFit
-- Task Manager
-- Wordle (Android)
-- MentalMate (AI-driven wellness companion)
-
-### iOS Projects
-
-- Wordle (iOS)
-- Trivia Quiz
-- Tumblr Feed
-- TuneTrek Music App
-
-Across these applications I worked with:
-
-- REST APIs
-- JSON parsing
-- asynchronous networking
-- lifecycle-aware UI development
-- persistent storage workflows
-- debugging runtime issues
-- MVC-style architectures
-
-Building native apps strengthened my understanding of how frontend systems behave in constrained real-device environments.
-
----
-
-# ☕ Java Engineering Experience
-
-I have used Java across coursework and projects involving:
-
-- object-oriented programming
-- algorithm implementation
-- data structures
-- multi-class program architecture
-- debugging structured logic systems
-
-Java helped strengthen my understanding of:
-
-- abstraction
-- modular program structure
-- runtime behavior
-- correctness vs implementation detail
-
-This foundation supports my approach to backend engineering today.
-
----
-
-# 🛠 Developer Tooling Experience
-
-I enjoy working close to developer workflows and tooling environments.
-
-Tools I regularly use:
-
-- Git
-- Firebase
-- Google Cloud
-- IntelliJ
-- Android Studio
-- PyCharm
-- VS Code
-
-I'm particularly interested in how tooling shapes developer productivity and how AI coding agents integrate into engineering workflows.
-
----
-
-# 💼 Experience
-
-## President & Founder —[ Google Developer Group at FIU](https://gdgatfiu.vercel.app/ ), [Swift Club at FIU](https://swiftclubatfiu.vercel.app/), [Code Crunch](https://codecrunchglobal.vercel.app/), [ColorStack at FIU](https://colorstackatfiu.vercel.app/), [CAHSI at FIU](https://cahsiatfiu.vercel.app/), and [Raspberry Pi Code Crunch](https://raspberrypicodecrunch.vercel.app/)
-
-August 2024 – Present | Miami, FL
-
-Founded and lead a technical student organization focused on helping students strengthen software engineering skills through:
-
-- coding workshops
-- interview preparation sessions
-- project-based learning
-- hackathons
-- industry panels
-
-
----
-
-## Tech Fellow — CodePath
-
-Sep 2023 – Present
-
-Support students learning:
-
-- data structures
-- algorithms
-- debugging strategies
-- structured problem-solving approaches
-
-This role strengthened my ability to explain technical ideas clearly and help others develop engineering intuition.
-
----
-
-## SEO Tech Developer Intern
-
-May 2024 – August 2024 | New York, NY
-
-Built multiple software projects involving:
-
-- AI-integrated applications
-- backend logic systems
-- Python-based workflows
-- API-driven architectures
-
-Projects included:
-
-- AI Customer Support
-- EcoRoute
-- HealthWatch
-- StockSnap
-
-This internship strengthened my experience building applications from concept to working implementation.
-
----
-
-# 🎓 Education
-
-## Florida International University
-
-Bachelor of Arts in Computer Science  
-Honors College  
-
-Minor: Business Analytics  
-
-GPA: 3.75
-
----
-
-## Google Tech Exchange
-
-Completed coursework in:
-
-- Applied Data Structures
-- Software Development Studio
-- Careers in Tech
-- Project Management
-
-This experience strengthened both my technical foundation and collaborative engineering skills.
-
----
-
-# 🛠 Technical Stack
-
-## Primary Languages
-
-Python  
-Java  
-Kotlin  
-Swift  
-JavaScript  
-C++  
-SQL  
-
----
-
-## Mobile Development
-
-Android (Kotlin)  
-iOS (Swift)  
-REST API integration  
-JSON parsing  
-persistent storage  
-asynchronous networking  
-
----
-
-## Backend & Cloud
-
-Firebase  
-Flask  
-Next.js  
-Google Cloud  
-
----
-
-## Developer Tooling
-
-Git  
-Android Studio  
-IntelliJ  
-PyCharm  
-VS Code  
-
----
-
-## Engineering Interests
-
-AI coding agents  
-evaluation environments  
-automated testing  
-fuzzing  
-mobile systems  
-developer tooling  
-
----
-
-# 🏆 Honors and Awards
-
-Dean’s List  
-
-Hispanic Scholarship Fund Scholar  
-
-Tau Sigma National Honor Society  
-
-Phi Theta Kappa Honor Society  
-
----
-
-# 🔗 Links
-
-Resume
-
-https://brian-bazurto.vercel.app/
-
-LinkedIn
-
-https://linkedin.com/in/IBA001
-
-GitHub
-
-https://github.com/ba-00001
-
----
-
-# ⚡ Fun Fact
-
-I enjoy building technical communities almost as much as I enjoy building software systems.
-
-Both scale better than expected.
-
-

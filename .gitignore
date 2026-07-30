@@ -1,0 +1,12 @@
+# The private dev-guide repo must never appear in a public repo's tree or
+# history (belt + suspenders alongside the global ignore).
+projectguidefordev/
+sync-projectguidefordev.sh
+
+# Local preview scratch produced while iterating on the sheet art.
+assets/_preview*.html
+
+.DS_Store
+__pycache__/
+*.pyc
+.vercel

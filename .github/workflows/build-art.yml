@@ -1,0 +1,41 @@
+name: build-art
+
+# assets/*.svg are generated files. If someone edits the generator and forgets
+# to rebuild, this regenerates and commits the SVGs so the committed art can
+# never drift from its source.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - assets/src/build.py
+      - .github/workflows/build-art.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Regenerate sheet art
+        run: python3 assets/src/build.py
+
+      - name: Commit if the art changed
+        run: |
+          if git diff --quiet -- assets; then
+            echo "art already up to date"
+            exit 0
+          fi
+          git config user.name  "ba-00001"
+          git config user.email "124537281+ba-00001@users.noreply.github.com"
+          git add assets
+          git commit -m "chore(assets): rebuild sheet art from generator"
+          git push
