@@ -30,15 +30,9 @@ jobs:
   render:
     runs-on: ubuntu-latest
     steps:
-      # Blueprint palette, matching assets/*.svg so the page reads as one sheet.
-      - name: Snake
-        uses: Platane/snk@v3
-        with:
-          github_user_name: ${{ github.repository_owner }}
-          outputs: |
-            dist/snake-dark.svg?palette=github-dark&color_snake=%23f0a500&color_dots=%23071626,%231d3a55,%2327506f,%2338bdf8,%237dd3fc
-            dist/snake-light.svg?palette=github-light&color_snake=%23b45309&color_dots=%23e3ebf3,%23a3bed4,%230ea5e9,%230369a1,%23075985
-
+      # Streak runs FIRST, and creates dist/ as the `runner` user. The snake
+      # action is a Docker action running as root: if it creates dist/ first,
+      # the PHP streak step cannot write into it ("Permission denied").
       - name: Streak (dark)
         uses: DenverCoder1/github-readme-streak-stats@v1.7.0
         with:
@@ -52,6 +46,15 @@ jobs:
           path: dist/streak-light.svg
           options: >-
             user=${{ github.repository_owner }}&border_radius=0&background=EEF3F8&border=A3BED4&stroke=A3BED4&ring=0369A1&fire=B45309&currStreakNum=123049&sideNums=123049&currStreakLabel=0369A1&sideLabels=5B7893&dates=5B7893
+
+      # Blueprint palette, matching assets/*.svg so the page reads as one sheet.
+      - name: Snake
+        uses: Platane/snk@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/snake-dark.svg?palette=github-dark&color_snake=%23f0a500&color_dots=%23071626,%231d3a55,%2327506f,%2338bdf8,%237dd3fc
+            dist/snake-light.svg?palette=github-light&color_snake=%23b45309&color_dots=%23e3ebf3,%23a3bed4,%230ea5e9,%230369a1,%23075985
 
       - name: Publish to output branch
         uses: crazy-max/ghaction-github-pages@v4
