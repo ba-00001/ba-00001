@@ -60,7 +60,11 @@ ASK ME     python, kotlin/swift, fuzzing, running a dev community that actually 
 </picture>
 
 <p align="center">
-  <img alt="Contribution grid, eaten by a snake" src="https://raw.githubusercontent.com/ba-00001/ba-00001/output/snake.svg" width="100%">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ba-00001/ba-00001/output/snake-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ba-00001/ba-00001/output/snake-light.svg">
+    <img alt="Contribution grid, eaten by a snake" src="https://raw.githubusercontent.com/ba-00001/ba-00001/output/snake-dark.svg" width="100%">
+  </picture>
 </p>
 
 <details>
