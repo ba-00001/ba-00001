@@ -5,7 +5,7 @@
 </picture>
 
 <p align="center">
-  <a href="https://brian-bazurto.vercel.app"><img alt="Portfolio" src="https://img.shields.io/badge/PORTFOLIO-brian--bazurto.vercel.app-38bdf8?style=flat-square&labelColor=071626"></a>
+  <a href="https://brianbazurto.vercel.app"><img alt="Portfolio" src="https://img.shields.io/badge/PORTFOLIO-brianbazurto.vercel.app-38bdf8?style=flat-square&labelColor=071626"></a>
   <a href="https://linkedin.com/in/IBA001"><img alt="LinkedIn" src="https://img.shields.io/badge/LINKEDIN-IBA001-0a66c2?style=flat-square&labelColor=071626"></a>
   <img alt="Location" src="https://img.shields.io/badge/LOCATION-MIAMI%2C%20FL-f0a500?style=flat-square&labelColor=071626">
   <img alt="Profile views" src="https://komarev.com/ghpvc/?username=ba-00001&style=flat-square&color=38bdf8&label=SHEET+VIEWS">
@@ -34,9 +34,9 @@ ASK ME     python, kotlin/swift, fuzzing, running a dev community that actually 
 
 <p align="center">
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats-ba.vercel.app/api?username=ba-00001&show_icons=true&include_all_commits=true&count_private=true&rank_icon=percentile&border_radius=0&custom_title=FIG.%203%20%E2%80%94%20BUILD%20TELEMETRY&bg_color=071626&title_color=38bdf8&text_color=cfe9ff&icon_color=f0a500&border_color=27506f">
-  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats-ba.vercel.app/api?username=ba-00001&show_icons=true&include_all_commits=true&count_private=true&rank_icon=percentile&border_radius=0&custom_title=FIG.%203%20%E2%80%94%20BUILD%20TELEMETRY&bg_color=eef3f8&title_color=0369a1&text_color=123049&icon_color=b45309&border_color=a3bed4">
-  <img alt="GitHub stats" src="https://github-readme-stats-ba.vercel.app/api?username=ba-00001&show_icons=true&include_all_commits=true&count_private=true&rank_icon=percentile&border_radius=0&bg_color=071626&title_color=38bdf8&text_color=cfe9ff&icon_color=f0a500&border_color=27506f" height="195">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ba-00001/ba-00001/output/stats-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ba-00001/ba-00001/output/stats-light.svg">
+  <img alt="GitHub stats" src="https://raw.githubusercontent.com/ba-00001/ba-00001/output/stats-dark.svg" height="195">
 </picture>
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ba-00001/ba-00001/output/streak-dark.svg">
@@ -47,16 +47,16 @@ ASK ME     python, kotlin/swift, fuzzing, running a dev community that actually 
 
 <p align="center">
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats-ba.vercel.app/api/top-langs/?username=ba-00001&layout=compact&langs_count=9&count_private=true&size_weight=0.3&count_weight=0.7&hide=nushell%2Cfortran%2Cnix%2Ccython%2Croff%2Ctex%2Cmakefile%2Cshell%2Cbatchfile%2Cdockerfile&border_radius=0&card_width=420&custom_title=FIG.%204%20%E2%80%94%20MATERIALS&bg_color=071626&title_color=38bdf8&text_color=cfe9ff&border_color=27506f">
-  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats-ba.vercel.app/api/top-langs/?username=ba-00001&layout=compact&langs_count=9&count_private=true&size_weight=0.3&count_weight=0.7&hide=nushell%2Cfortran%2Cnix%2Ccython%2Croff%2Ctex%2Cmakefile%2Cshell%2Cbatchfile%2Cdockerfile&border_radius=0&card_width=420&custom_title=FIG.%204%20%E2%80%94%20MATERIALS&bg_color=eef3f8&title_color=0369a1&text_color=123049&border_color=a3bed4">
-  <img alt="Most used languages" src="https://github-readme-stats-ba.vercel.app/api/top-langs/?username=ba-00001&layout=compact&langs_count=9&count_private=true&size_weight=0.3&count_weight=0.7&hide=nushell,fortran,nix,cython,roff,tex,makefile,shell,batchfile,dockerfile&card_width=420&border_radius=0&bg_color=071626&title_color=38bdf8&text_color=cfe9ff&border_color=27506f" width="420">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ba-00001/ba-00001/output/langs-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ba-00001/ba-00001/output/langs-light.svg">
+  <img alt="Most used languages" src="https://raw.githubusercontent.com/ba-00001/ba-00001/output/langs-dark.svg" width="420">
 </picture>
 </p>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=ba-00001&custom_title=FIG.%205%20%E2%80%94%20COMMIT%20ACTIVITY%20/%20LAST%2031%20DAYS&radius=0&bg_color=071626&color=cfe9ff&title_color=38bdf8&line=38bdf8&point=f0a500&area=true&area_color=38bdf8&border_color=27506f">
-  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=ba-00001&custom_title=FIG.%205%20%E2%80%94%20COMMIT%20ACTIVITY%20/%20LAST%2031%20DAYS&radius=0&bg_color=eef3f8&color=123049&title_color=0369a1&line=0369a1&point=b45309&area=true&area_color=0369a1&border_color=a3bed4">
-  <img alt="Contribution activity graph" src="https://github-readme-activity-graph.vercel.app/graph?username=ba-00001&radius=0&bg_color=071626&color=cfe9ff&title_color=38bdf8&line=38bdf8&point=f0a500&area=true&area_color=38bdf8&border_color=27506f" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ba-00001/ba-00001/output/activity-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ba-00001/ba-00001/output/activity-light.svg">
+  <img alt="Contribution activity graph" src="https://raw.githubusercontent.com/ba-00001/ba-00001/output/activity-dark.svg" width="100%">
 </picture>
 
 <p align="center">
@@ -173,7 +173,7 @@ Built AI-integrated applications end to end: AI Customer Support, EcoRoute, Heal
 ## `SHEET 07` — Contact
 
 <p align="center">
-  <a href="https://brian-bazurto.vercel.app"><img alt="Résumé" src="https://img.shields.io/badge/R%C3%89SUM%C3%89-brian--bazurto.vercel.app-38bdf8?style=for-the-badge&labelColor=071626"></a>
+  <a href="https://brianbazurto.vercel.app"><img alt="Résumé" src="https://img.shields.io/badge/R%C3%89SUM%C3%89-brianbazurto.vercel.app-38bdf8?style=for-the-badge&labelColor=071626"></a>
   <a href="https://linkedin.com/in/IBA001"><img alt="LinkedIn" src="https://img.shields.io/badge/LINKEDIN-IBA001-0a66c2?style=for-the-badge&labelColor=071626"></a>
   <a href="https://github.com/ba-00001?tab=repositories"><img alt="Repositories" src="https://img.shields.io/badge/REPOS-114-f0a500?style=for-the-badge&labelColor=071626"></a>
 </p>

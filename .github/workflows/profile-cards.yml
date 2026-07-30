@@ -56,6 +56,49 @@ jobs:
             dist/snake-dark.svg?palette=github-dark&color_snake=%23f0a500&color_dots=%23071626,%231d3a55,%2327506f,%2338bdf8,%237dd3fc
             dist/snake-light.svg?palette=github-light&color_snake=%23b45309&color_dots=%23e3ebf3,%23a3bed4,%230ea5e9,%230369a1,%23075985
 
+      # Snapshot the remaining cards so a visitor's browser never depends on a
+      # third-party service being up. One fetch per card per day sits far under
+      # the unauthenticated GitHub rate limit, which is why no token is needed.
+      # A card that comes back as an error or malformed SVG fails the job rather
+      # than being published over a known-good one.
+      - name: Snapshot remote cards
+        run: |
+          set -euo pipefail
+          user='${{ github.repository_owner }}'
+          grs='https://github-readme-stats-ba.vercel.app'
+          graph='https://github-readme-activity-graph.vercel.app/graph'
+          hide='nushell,fortran,nix,cython,roff,tex,makefile,shell,batchfile,dockerfile'
+
+          fetch() {
+            out="dist/$1"; url="$2"
+            curl -fsS --retry 5 --retry-delay 6 --retry-all-errors -m 60 "$url" -o "$out"
+            if grep -qi 'Something went wrong\|Maximum retries exceeded\|rate limit' "$out"; then
+              echo "::error::$1 came back as an error card"; exit 1
+            fi
+            python3 -c "import xml.dom.minidom,sys; xml.dom.minidom.parse('$out')" \
+              || { echo "::error::$1 is not well-formed SVG"; exit 1; }
+            echo "ok  $1  $(wc -c <"$out") bytes"
+          }
+
+          for mode in dark light; do
+            if [ "$mode" = dark ]; then
+              bg=071626; title=38bdf8; text=cfe9ff; icon=f0a500; border=27506f
+              line=38bdf8; point=f0a500; gcolor=cfe9ff
+            else
+              bg=eef3f8; title=0369a1; text=123049; icon=b45309; border=a3bed4
+              line=0369a1; point=b45309; gcolor=123049
+            fi
+
+            fetch "stats-$mode.svg" \
+              "$grs/api?username=$user&show_icons=true&include_all_commits=true&count_private=true&rank_icon=percentile&border_radius=0&custom_title=FIG.%203%20%E2%80%94%20BUILD%20TELEMETRY&bg_color=$bg&title_color=$title&text_color=$text&icon_color=$icon&border_color=$border"
+
+            fetch "langs-$mode.svg" \
+              "$grs/api/top-langs/?username=$user&layout=compact&langs_count=9&count_private=true&size_weight=0.3&count_weight=0.7&hide=$hide&card_width=420&border_radius=0&custom_title=FIG.%204%20%E2%80%94%20MATERIALS&bg_color=$bg&title_color=$title&text_color=$text&border_color=$border"
+
+            fetch "activity-$mode.svg" \
+              "$graph?username=$user&custom_title=FIG.%205%20%E2%80%94%20COMMIT%20ACTIVITY%20/%20LAST%2031%20DAYS&radius=0&bg_color=$bg&color=$gcolor&title_color=$title&line=$line&point=$point&area=true&area_color=$line&border_color=$border"
+          done
+
       - name: Publish to output branch
         uses: crazy-max/ghaction-github-pages@v4
         with:
