@@ -80,18 +80,18 @@ ASK ME     python, kotlin/swift, fuzzing, running a dev community that actually 
 </p>
 
 <details>
-<summary><b>Arcade mode</b> — the same grid, played</summary>
+<summary><b>Arcade mode</b> — the same grid, played (Pac-Man, Breakout)</summary>
 <br>
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ba-00001/ba-00001/output/pacman-contribution-graph-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ba-00001/ba-00001/output/pacman-contribution-graph.svg">
-    <img alt="Pac-Man eating the contribution grid" src="https://raw.githubusercontent.com/ba-00001/ba-00001/output/pacman-contribution-graph-dark.svg" width="100%">
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ba-00001/ba-00001/output/arcade-pacman-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ba-00001/ba-00001/output/arcade-pacman-light.svg">
+    <img alt="Pac-Man eating the contribution grid" src="https://raw.githubusercontent.com/ba-00001/ba-00001/output/arcade-pacman-dark.svg" width="100%">
   </picture>
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ba-00001/ba-00001/output/breakout-contribution-graph-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ba-00001/ba-00001/output/breakout-contribution-graph.svg">
-    <img alt="Breakout played against the contribution grid" src="https://raw.githubusercontent.com/ba-00001/ba-00001/output/breakout-contribution-graph-dark.svg" width="100%">
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ba-00001/ba-00001/output/arcade-breakout-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ba-00001/ba-00001/output/arcade-breakout-light.svg">
+    <img alt="Breakout played against the contribution grid" src="https://raw.githubusercontent.com/ba-00001/ba-00001/output/arcade-breakout-dark.svg" width="100%">
   </picture>
 </p>
 </details>

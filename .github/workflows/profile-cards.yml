@@ -110,14 +110,55 @@ jobs:
             echo "ok  iso-$mode.svg  $(wc -c <"dist/iso-$mode.svg") bytes"
           done
 
-      # Arcade cards. These only accept four named themes, so unlike everything
-      # else they cannot be palette-matched — which is why the README keeps them
-      # in a collapsed block rather than on a main sheet.
-      - name: Arcade games
-        uses: abozanona/pacman-contribution-graph@main
+      # Arcade cards. Two upstream problems are worked around here:
+      #
+      #  1. @main is broken — the Node 24 migration (2026-07-26) made the action
+      #     exit silently having written nothing, so it is pinned to the last
+      #     release known to work. Pinning a third-party action to a SHA is the
+      #     safer default anyway.
+      #  2. Even pinned, a run containing Pac-Man writes its light SVG and then
+      #     exits without producing the dark one. Each game therefore gets its
+      #     own step, and both output variants are recoloured by retheme.py from
+      #     the light file — which every game does produce.
+      #
+      # continue-on-error: a flaky novelty card must never fail the run that
+      # publishes the real telemetry.
+      - name: Arcade — Pac-Man
+        continue-on-error: true
+        uses: abozanona/pacman-contribution-graph@aa1e3d3fc74ae56baf0c4114ecad11f1ec96f250
         with:
           github_user_name: ${{ github.repository_owner }}
-          games: pacman,breakout
+          games: pacman
+
+      - name: Arcade — Breakout
+        continue-on-error: true
+        uses: abozanona/pacman-contribution-graph@aa1e3d3fc74ae56baf0c4114ecad11f1ec96f250
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          games: breakout
+
+      - name: Retheme arcade cards to the blueprint palette
+        run: |
+          set -euo pipefail
+          for game in pacman breakout; do
+            src="dist/${game}-contribution-graph.svg"
+            if [ -f "$src" ]; then
+              python3 assets/src/retheme.py "$src" "dist/arcade-$game"
+            else
+              # Carry forward the last good copy rather than publishing a gap —
+              # the publish step replaces the branch, so a missing file here
+              # would turn into a broken image on the profile.
+              echo "::warning::$game did not generate; carrying forward the published copy"
+              for mode in dark light; do
+                url="https://raw.githubusercontent.com/${{ github.repository }}/output/arcade-$game-$mode.svg"
+                curl -fsS -m 30 "$url" -o "dist/arcade-$game-$mode.svg" \
+                  || echo "::warning::no previous arcade-$game-$mode.svg to carry forward"
+              done
+            fi
+          done
+          # the raw GitHub-green originals are inputs, not outputs
+          rm -f dist/*-contribution-graph.svg dist/*-contribution-graph-dark.svg
+          ls dist/arcade-* 2>/dev/null || echo "::warning::no arcade cards this run"
 
       - name: Snake
         uses: Platane/snk@v3
