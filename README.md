@@ -191,7 +191,7 @@ Built AI-integrated applications end to end: AI Customer Support, EcoRoute, Heal
 <p align="center">
   <a href="https://brianbazurto.vercel.app"><img alt="Résumé" src="https://img.shields.io/badge/R%C3%89SUM%C3%89-brianbazurto.vercel.app-38bdf8?style=for-the-badge&labelColor=071626"></a>
   <a href="https://linkedin.com/in/IBA001"><img alt="LinkedIn" src="https://img.shields.io/badge/LINKEDIN-IBA001-0a66c2?style=for-the-badge&labelColor=071626"></a>
-  <a href="https://github.com/ba-00001?tab=repositories"><img alt="Repositories" src="https://img.shields.io/badge/REPOS-114-f0a500?style=for-the-badge&labelColor=071626"></a>
+  <a href="https://github.com/ba-00001?tab=repositories"><img alt="Repositories" src="https://img.shields.io/badge/REPOSITORIES-BROWSE-f0a500?style=for-the-badge&labelColor=071626"></a>
 </p>
 
 <picture>
