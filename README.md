@@ -39,9 +39,9 @@ ASK ME     python, kotlin/swift, fuzzing, running a dev community that actually 
   <img alt="GitHub stats" src="https://github-readme-stats-ba.vercel.app/api?username=ba-00001&show_icons=true&include_all_commits=true&count_private=true&rank_icon=percentile&border_radius=0&bg_color=071626&title_color=38bdf8&text_color=cfe9ff&icon_color=f0a500&border_color=27506f" height="195">
 </picture>
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com?user=ba-00001&v=2&border_radius=0&background=071626&border=27506F&stroke=27506F&ring=38BDF8&fire=F0A500&currStreakNum=CFE9FF&sideNums=CFE9FF&currStreakLabel=38BDF8&sideLabels=5D829F&dates=5D829F">
-  <source media="(prefers-color-scheme: light)" srcset="https://streak-stats.demolab.com?user=ba-00001&v=2&border_radius=0&background=EEF3F8&border=A3BED4&stroke=A3BED4&ring=0369A1&fire=B45309&currStreakNum=123049&sideNums=123049&currStreakLabel=0369A1&sideLabels=5B7893&dates=5B7893">
-  <img alt="Contribution streak" src="https://streak-stats.demolab.com?user=ba-00001&v=2&border_radius=0&background=071626&border=27506F&stroke=27506F&ring=38BDF8&fire=F0A500&currStreakNum=CFE9FF&sideNums=CFE9FF&currStreakLabel=38BDF8&sideLabels=5D829F&dates=5D829F" height="195">
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-streak-stats.herokuapp.com/?user=ba-00001&border_radius=0&background=071626&border=27506F&stroke=27506F&ring=38BDF8&fire=F0A500&currStreakNum=CFE9FF&sideNums=CFE9FF&currStreakLabel=38BDF8&sideLabels=5D829F&dates=5D829F">
+  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-streak-stats.herokuapp.com/?user=ba-00001&border_radius=0&background=EEF3F8&border=A3BED4&stroke=A3BED4&ring=0369A1&fire=B45309&currStreakNum=123049&sideNums=123049&currStreakLabel=0369A1&sideLabels=5B7893&dates=5B7893">
+  <img alt="Contribution streak" src="https://github-readme-streak-stats.herokuapp.com/?user=ba-00001&border_radius=0&background=071626&border=27506F&stroke=27506F&ring=38BDF8&fire=F0A500&currStreakNum=CFE9FF&sideNums=CFE9FF&currStreakLabel=38BDF8&sideLabels=5D829F&dates=5D829F" height="195">
 </picture>
 </p>
 
