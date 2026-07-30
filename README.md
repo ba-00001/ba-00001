@@ -47,8 +47,8 @@ ASK ME     python, kotlin/swift, fuzzing, running a dev community that actually 
 
 <p align="center">
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats-ba.vercel.app/api/top-langs/?username=ba-00001&layout=compact&langs_count=9&count_private=true&size_weight=0.3&count_weight=0.7&hide=nushell,fortran,nix,cython,roff,tex,makefile,shell,batchfile,dockerfile&border_radius=0&custom_title=FIG.%204%20%E2%80%94%20MATERIAL%20DISTRIBUTION&bg_color=071626&title_color=38bdf8&text_color=cfe9ff&border_color=27506f">
-  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats-ba.vercel.app/api/top-langs/?username=ba-00001&layout=compact&langs_count=9&count_private=true&size_weight=0.3&count_weight=0.7&hide=nushell,fortran,nix,cython,roff,tex,makefile,shell,batchfile,dockerfile&border_radius=0&custom_title=FIG.%204%20%E2%80%94%20MATERIAL%20DISTRIBUTION&bg_color=eef3f8&title_color=0369a1&text_color=123049&border_color=a3bed4">
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats-ba.vercel.app/api/top-langs/?username=ba-00001&layout=compact&langs_count=9&count_private=true&size_weight=0.3&count_weight=0.7&hide=nushell%2Cfortran%2Cnix%2Ccython%2Croff%2Ctex%2Cmakefile%2Cshell%2Cbatchfile%2Cdockerfile&border_radius=0&custom_title=FIG.%204%20%E2%80%94%20MATERIAL%20DISTRIBUTION&bg_color=071626&title_color=38bdf8&text_color=cfe9ff&border_color=27506f">
+  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats-ba.vercel.app/api/top-langs/?username=ba-00001&layout=compact&langs_count=9&count_private=true&size_weight=0.3&count_weight=0.7&hide=nushell%2Cfortran%2Cnix%2Ccython%2Croff%2Ctex%2Cmakefile%2Cshell%2Cbatchfile%2Cdockerfile&border_radius=0&custom_title=FIG.%204%20%E2%80%94%20MATERIAL%20DISTRIBUTION&bg_color=eef3f8&title_color=0369a1&text_color=123049&border_color=a3bed4">
   <img alt="Most used languages" src="https://github-readme-stats-ba.vercel.app/api/top-langs/?username=ba-00001&layout=compact&langs_count=9&count_private=true&size_weight=0.3&count_weight=0.7&hide=nushell,fortran,nix,cython,roff,tex,makefile,shell,batchfile,dockerfile&border_radius=0&bg_color=071626&title_color=38bdf8&text_color=cfe9ff&border_color=27506f" width="420">
 </picture>
 </p>
@@ -117,14 +117,14 @@ ASK ME     python, kotlin/swift, fuzzing, running a dev community that actually 
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=py,java,kotlin,swift,ts,js,dart,cpp,mysql&theme=dark">
-    <source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=py,java,kotlin,swift,ts,js,dart,cpp,mysql&theme=light">
+    <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=py%2Cjava%2Ckotlin%2Cswift%2Cts%2Cjs%2Cdart%2Ccpp%2Cmysql&theme=dark">
+    <source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=py%2Cjava%2Ckotlin%2Cswift%2Cts%2Cjs%2Cdart%2Ccpp%2Cmysql&theme=light">
     <img alt="Languages: Python, Java, Kotlin, Swift, TypeScript, JavaScript, Dart, C++, SQL" src="https://skillicons.dev/icons?i=py,java,kotlin,swift,ts,js,dart,cpp,mysql&theme=dark">
   </picture>
   <br>
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=nextjs,react,flask,firebase,flutter,gcp,vercel,androidstudio,git&theme=dark">
-    <source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=nextjs,react,flask,firebase,flutter,gcp,vercel,androidstudio,git&theme=light">
+    <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=nextjs%2Creact%2Cflask%2Cfirebase%2Cflutter%2Cgcp%2Cvercel%2Candroidstudio%2Cgit&theme=dark">
+    <source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=nextjs%2Creact%2Cflask%2Cfirebase%2Cflutter%2Cgcp%2Cvercel%2Candroidstudio%2Cgit&theme=light">
     <img alt="Frameworks and tools: Next.js, React, Flask, Firebase, Flutter, Google Cloud, Vercel, Android Studio, Git" src="https://skillicons.dev/icons?i=nextjs,react,flask,firebase,flutter,gcp,vercel,androidstudio,git&theme=dark">
   </picture>
 </p>
