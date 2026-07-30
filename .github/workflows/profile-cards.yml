@@ -1,15 +1,17 @@
 name: profile-cards
 
-# Renders the two cards that would otherwise depend on a third-party service
-# being up when a visitor loads the page, and publishes them as static SVGs on
-# the `output` branch:
+# Builds every card the profile shows and publishes them as static SVGs on the
+# `output` branch, so a visitor's browser never depends on a third-party service
+# being up when the page loads:
 #
-#   snake-{dark,light}.svg   contribution grid, eaten
-#   streak-{dark,light}.svg  contribution streak
+#   activity-{dark,light}.svg   12-month commit graph, drawn by assets/src/activity.py
+#   snake-{dark,light}.svg      contribution grid, eaten
+#   streak-{dark,light}.svg     contribution streak
+#   stats/langs-{dark,light}.svg        fetched from our own stats instance
+#   sum-*-{dark,light}.svg              supplementary cards
 #
-# Both are generated in ONE job on purpose: the publish step replaces the whole
-# branch, so splitting them across workflows would make each run clobber the
-# other's output.
+# All in ONE job on purpose: the publish step replaces the whole branch, so
+# splitting them across workflows would make each run clobber the other's output.
 
 on:
   schedule:
@@ -17,7 +19,10 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: [.github/workflows/profile-cards.yml]
+    paths:
+      - .github/workflows/profile-cards.yml
+      - assets/src/activity.py
+      - assets/src/build.py
 
 permissions:
   contents: write
@@ -30,9 +35,13 @@ jobs:
   render:
     runs-on: ubuntu-latest
     steps:
-      # Streak runs FIRST, and creates dist/ as the `runner` user. The snake
-      # action is a Docker action running as root: if it creates dist/ first,
-      # the PHP streak step cannot write into it ("Permission denied").
+      - uses: actions/checkout@v4
+
+      # Streak runs FIRST, and creates dist/ as the `runner` user. Platane/snk
+      # is a Docker action running as root: if it creates dist/ first, the PHP
+      # streak step cannot write into it ("Permission denied").
+      #
+      # The action has no floating v1 tag — it must be pinned to a full version.
       - name: Streak (dark)
         uses: DenverCoder1/github-readme-streak-stats@v1.7.0
         with:
@@ -47,63 +56,43 @@ jobs:
           options: >-
             user=${{ github.repository_owner }}&border_radius=0&background=EEF3F8&border=A3BED4&stroke=A3BED4&ring=0369A1&fire=B45309&currStreakNum=123049&sideNums=123049&currStreakLabel=0369A1&sideLabels=5B7893&dates=5B7893
 
-      # Blueprint palette, matching assets/*.svg so the page reads as one sheet.
+      # FIG. 5 is drawn here rather than fetched. The activity-graph service
+      # caps at 90 days — larger values are silently ignored and fall back to
+      # 31 — so a full year is only possible by rendering it ourselves, which
+      # also puts the figure in the blueprint palette instead of a foreign one.
+      - name: Activity graph (12 months)
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          gh api graphql \
+            -f login='${{ github.repository_owner }}' \
+            -f query='query($login:String!){user(login:$login){contributionsCollection{contributionCalendar{totalContributions weeks{contributionDays{date contributionCount}}}}}}' \
+            --jq '.data.user.contributionsCollection.contributionCalendar' \
+            > calendar.json
+          python3 -c "import json,sys; c=json.load(open('calendar.json')); print('weeks', len(c['weeks']), 'total', c['totalContributions'])"
+          python3 assets/src/activity.py dist < calendar.json
+
       - name: Snake
         uses: Platane/snk@v3
         with:
           github_user_name: ${{ github.repository_owner }}
+          # Blueprint palette — matches assets/*.svg so the page reads as one sheet.
           outputs: |
             dist/snake-dark.svg?palette=github-dark&color_snake=%23f0a500&color_dots=%23071626,%231d3a55,%2327506f,%2338bdf8,%237dd3fc
             dist/snake-light.svg?palette=github-light&color_snake=%23b45309&color_dots=%23e3ebf3,%23a3bed4,%230ea5e9,%230369a1,%23075985
 
-      # A 31-day window looks empty during a quiet stretch — exams, a break —
-      # which reads as "stopped coding" rather than "was busy elsewhere". When
-      # the last month is thin, widen the graph to 90 days so the shape of the
-      # work still shows. 90 is the service's hard cap: anything larger is
-      # silently ignored and falls back to 31.
-      - name: Choose activity window
-        id: window
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          set -uo pipefail
-          from="$(date -u -d '31 days ago' +%Y-%m-%dT%H:%M:%SZ)"
-          recent="$(gh api graphql \
-            -f login='${{ github.repository_owner }}' -f from="$from" \
-            -f query='query($login:String!,$from:DateTime!){user(login:$login){contributionsCollection(from:$from){contributionCalendar{totalContributions}}}}' \
-            --jq '.data.user.contributionsCollection.contributionCalendar.totalContributions' 2>/dev/null || true)"
-
-          # Any failure (token scope, API hiccup) falls through to the 31-day
-          # default rather than failing the run.
-          case "$recent" in ''|*[!0-9]*) recent=-1 ;; esac
-
-          if [ "$recent" -ge 0 ] && [ "$recent" -lt 25 ]; then
-            days=90; label='LAST 90 DAYS'
-          else
-            days=31; label='LAST 31 DAYS'
-          fi
-          echo "last 31 days: $recent contributions -> window ${days}d"
-          {
-            echo "days=$days"
-            echo "label=$label"
-          } >> "$GITHUB_OUTPUT"
-
-      # Snapshot the remaining cards so a visitor's browser never depends on a
-      # third-party service being up. One fetch per card per day sits far under
-      # the unauthenticated GitHub rate limit, which is why no token is needed.
-      # A card that comes back as an error or malformed SVG fails the job rather
-      # than being published over a known-good one.
+      # Snapshot the rest so nothing is fetched at page-load time. One request
+      # per card per day sits far under the unauthenticated GitHub rate limit,
+      # which is why no token is needed here. A card that comes back as an error
+      # or malformed SVG fails the job rather than replacing a known-good one.
       - name: Snapshot remote cards
         run: |
           set -euo pipefail
           user='${{ github.repository_owner }}'
           grs='https://github-readme-stats-ba.vercel.app'
-          graph='https://github-readme-activity-graph.vercel.app/graph'
           summary='https://github-profile-summary-cards.vercel.app/api/cards'
           hide='nushell,fortran,nix,cython,roff,tex,makefile,shell,batchfile,dockerfile'
-          window_days='${{ steps.window.outputs.days }}'
-          # percent-encode the title once: spaces -> %20, em dash -> %E2%80%94
-          window_title="FIG.%205%20%E2%80%94%20COMMIT%20ACTIVITY%20/%20$(printf '%s' '${{ steps.window.outputs.label }}' | sed 's/ /%20/g')"
 
           fetch() {
             out="dist/$1"; url="$2"
@@ -119,10 +108,8 @@ jobs:
           for mode in dark light; do
             if [ "$mode" = dark ]; then
               bg=071626; title=38bdf8; text=cfe9ff; icon=f0a500; border=27506f
-              line=38bdf8; point=f0a500; gcolor=cfe9ff
             else
               bg=eef3f8; title=0369a1; text=123049; icon=b45309; border=a3bed4
-              line=0369a1; point=b45309; gcolor=123049
             fi
 
             fetch "stats-$mode.svg" \
@@ -131,21 +118,14 @@ jobs:
             fetch "langs-$mode.svg" \
               "$grs/api/top-langs/?username=$user&layout=compact&langs_count=9&count_private=true&size_weight=0.3&count_weight=0.7&hide=$hide&card_width=420&border_radius=0&custom_title=FIG.%204%20%E2%80%94%20MATERIALS&bg_color=$bg&title_color=$title&text_color=$text&border_color=$border"
 
-            fetch "activity-$mode.svg" \
-              "$graph?username=$user&days=$window_days&custom_title=$window_title&radius=0&bg_color=$bg&color=$gcolor&title_color=$title&line=$line&point=$point&area=true&area_color=$line&border_color=$border"
-
-            # Supplementary cards. These are shown expanded, so they are
-            # snapshotted like everything else. They only take a named theme,
-            # not our palette — hence their own visual style on the page.
+            # Supplementary cards. Shown expanded, so snapshotted like the rest.
+            # They only take a named theme, not our palette — hence their own
+            # visual style on the page.
             sum_theme="github_$mode"
-            fetch "sum-profile-$mode.svg" \
-              "$summary/profile-details?username=$user&theme=$sum_theme"
-            fetch "sum-langs-$mode.svg" \
-              "$summary/repos-per-language?username=$user&theme=$sum_theme"
-            fetch "sum-commitlang-$mode.svg" \
-              "$summary/most-commit-language?username=$user&theme=$sum_theme"
-            fetch "sum-time-$mode.svg" \
-              "$summary/productive-time?username=$user&utcOffset=-5&theme=$sum_theme"
+            fetch "sum-profile-$mode.svg"     "$summary/profile-details?username=$user&theme=$sum_theme"
+            fetch "sum-langs-$mode.svg"       "$summary/repos-per-language?username=$user&theme=$sum_theme"
+            fetch "sum-commitlang-$mode.svg"  "$summary/most-commit-language?username=$user&theme=$sum_theme"
+            fetch "sum-time-$mode.svg"        "$summary/productive-time?username=$user&utcOffset=-5&theme=$sum_theme"
           done
 
       - name: Publish to output branch
